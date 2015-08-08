@@ -22,8 +22,8 @@ sub3<- new_data$Sub_metering_3
 
 png(filename="plot3.png", width=480, height=480)
 plot(x, sub1, type ="n", ylab="Energy sub metering", xlab="")
-points(x,sub1, type="l", col="purple")
+points(x,sub1, type="l", col="black")
 points(x, sub2, type="l", col="red")
 points(x, sub3, type="l", col="blue")
-legend("topright", legend = names(new_data)[7:9], col=c(1:3), lwd=2) # setting legend top right with --
+legend("topright", legend = names(new_data)[7:9], col=c("black","red","blue"), lwd=2) # setting legend top right with --
 dev.off()

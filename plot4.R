@@ -25,14 +25,14 @@ sub3<- new_data$Sub_metering_3
 png(filename="plot4.png", width=480, height=480)
 par(mfcol = c(2,2))
 #1st plot
-plot(x,y, type="l", xlab ="",ylab="Global Active Power (kilowatts)")
+plot(x,y, type="l", xlab ="",ylab="Global Active Power")
 
 #2nd plot
 plot(x, sub1, type ="n", ylab="Energy sub metering", xlab="")
-points(x,sub1, type="l", col="purple")
+points(x,sub1, type="l", col="black")
 points(x, sub2, type="l", col="red")
 points(x, sub3, type="l", col="blue")
-legend("topright", legend = names(new_data)[7:9], col=c(1:3), lwd=2, cex =1,bty="n") # setting legend top right with -- bty="n" to remove border
+legend("topright", legend = names(new_data)[7:9], col=c("black","red","blue"), lwd=2, bty="n", cex=.94) # setting legend top right with --
 
 #3rd plot
 Voltage <- new_data$Voltage
